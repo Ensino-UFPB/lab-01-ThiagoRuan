@@ -1,1 +1,63 @@
 Coloque aqui todas as respostas das práticas indicadas no README.md
+
+1- 
+  1.1- 172.18.0.0 e 255.255.0.0
+  1.2- 172.18.0.1
+  1.3- duas rotas.
+
+2- 
+  2.1- 172.18.0.2
+  2.2- 172.18.0.2/16
+  2.3- eth0@if9
+
+3- 
+  google: 172.217.30.68
+  whitehouse: 192.0.66.51
+  rnp: 104.18.27.22, 104.18.26.22
+  ufpb: 150.165.254.52
+
+4- 
+  4.1-
+    4.1.1- 0.112ms
+    4.1.2- 0.226ms
+
+  4.2- ufpb: 25.732ms
+       yahoo: 315.730ms
+       brasil.gov: 77.102ms
+       O www.dce.ufpb.br não foi acessado, retornando a seguinte mensagem: "unknow host".
+
+  4.3-
+      google: 60.198ms
+      rnp: 69.087ms 
+      whitehouse: 58.413ms 
+
+      4.3.1- Diversos fatores podem influênciar o tempo, como: Distância pecorrida, Número de saltos até o destino, instabilidade da rede, número de acessos simultâneos no servidor, etc.
+
+5-
+  5.1- O traceroute pode não ter acesso a nenhum dado, por conta de criptografia ou privação do roteador como medidas de segurança.
+
+  5.2- Não, pois o traceroute ainda sinaliza que passou por um roteador, mesmo não exibindo dados sobre, já que é o servidor que não responde.
+
+6-
+  6.1- Active Internet connections (only servers)
+       Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+       tcp        0      0 127.0.0.11:42335        0.0.0.0:*               LISTEN      -                   
+       udp        0      0 127.0.0.11:59297        0.0.0.0:*                           -   
+
+  6.2- Kernel IP routing table
+       Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+       default         172.18.0.1      0.0.0.0         UG        0 0          0 eth0
+       172.18.0.0      0.0.0.0         255.255.0.0     U         0 0          0 eth0
+
+       6.2.1- Sim, mostram dados semelhantes de roteamento como "Destination", "Gateway", "Genmask", "Flags", "irtt" e "Iface"
+       6.2.2- Sim, Existem dois dados adicionais: "Mss" e "Window"
+
+7-
+  7.1- Sim, ele respondeu e o serviço está ativo.
+
+  7.2- Não, ele retornou como resposta que "www.dce.ufpb.br:21" é desconhecido, ou seja, o serviço não está ativo ou não existe.
+
+8-
+  8.1- Ele exibe constantemente o acesso em todos os roteadores da rota solicitada, o que ocasiona uma boa percepção da conexão em tempo real.
+
+  8.2- Ele exibe dados como o melhor tempo de reposta desde o inicio da execução, a média de tempo de resposta para aquele salto, o pior tempo de resposta desde o inicio da execução, a porcentagem de pacotes perdidos ao chegar naquele salto, como também o desvio padrão, mostrando a estabilidade ou instabilidade daquele salto. 
